@@ -1,63 +1,45 @@
-🚀 Job Tracker Dashboard
-A modern, responsive web application designed to help job seekers track their applications in one centralized location. This project focuses on dynamic DOM manipulation, state management, and professional UI design.
+Job Tracker Dashboard
 
-🌟 Features
-Real-time Statistics: A dashboard header that tracks the total number of applications, interviews, and rejections.
+Project Description:
 
-Dynamic Filtering: Three distinct tabs (All Jobs, Interview, Rejected) to sort your progress.
+This is a job application tracking dashboard I built to keep my job hunt organized. It allows me to see all my applications in one place, move them into "Interview" or "Rejected" categories, and delete them if needed. The dashboard updates the counts at the top in real-time using JavaScript.
 
-Interactive Status Toggling: Move a job card from "All" to "Interview" or "Rejected" with a single click, which instantly updates the dashboard counts.
 
-Delete Functionality: Remove job applications permanently from the UI and the data array.
 
-Empty State Management: Displays a custom jobs.png illustration and helpful text when a category has no data.
+Features:
 
-Fully Responsive: A Figma-inspired layout that adapts seamlessly from desktop monitors to mobile screens.
+Live Stats: Real-time counters for Applied, Interview, and Rejected jobs.
 
-🛠️ Technology Stack
-HTML5: Structural foundation.
+Tab Filtering: Quickly switch between different job statuses.
 
-Tailwind CSS: For professional, utility-first styling and responsiveness.
+Interactive Toggling: Move jobs between "Interview" and "Rejected" with a click.
 
-Vanilla JavaScript: Core logic for state management, filtering, and DOM updates.
+Delete Cards: Fully functional delete button that updates all counts.
 
-Font Awesome: Scalable vector icons for a polished look.
+Empty State: A custom jobs.png image shows up whenever a category is empty.
 
-⚙️ Setup Instructions
-Clone or Download: Save the project folder to your local machine.
+Mobile Responsive: Built with Tailwind CSS so it works on any screen size.
 
-File Structure: Ensure index.html, style.css, script.js, and jobs.png are all in the same root directory.
+Technical Questions & Answers:
 
-Run the App:
-
-Open VS Code.
-
-Right-click index.html and select "Open with Live Server".
-
-The dashboard will launch in your default browser at http://127.0.0.1:5500.
-
-🧠 Technical Q&A
 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
-
-getElementById is used to find one specific element that has a unique ID; it is the fastest selection method.
-
-getElementsByClassName returns a live collection of all elements with a specific class name.
-
-querySelector is more modern and flexible, allowing you to find the first element that matches any CSS selector (like .class, #id, or div > p).
-
-querySelectorAll is used when you want to find every element that matches a CSS selector, returning them as a static NodeList.
+getElementById grabs a single element using its ID. getElementsByClassName finds all elements with a certain class and gives you a list. querySelector is more flexible because you can use CSS-style selectors (like .class or #id) to find the first match. querySelectorAll finds every element that matches the selector and gives you a NodeList.
 
 2. How do you create and insert a new element into the DOM?
-To add something new to a page, you first use document.createElement('tagName') to create the element in the browser's memory. You then add content or classes to it (like element.innerText = "Hello"). Finally, you use a method like appendChild() or prepend() to attach that new element to an existing parent element already on the page.
+I use document.createElement('tagName') to make the element in memory. Then I can add text to it using .innerText. Finally, I use .appendChild(newElement) to put it inside an existing parent element on the page.
 
 3. What is Event Bubbling? And how does it work?
-Event Bubbling is the process where an event starts at the most specific element (the one you clicked) and then "bubbles up" to its parents. For example, if you click a button inside a div, the click event triggers on the button first, then moves to the div, then to the body, and finally to the document.
+Event bubbling is when an event (like a click) starts at the element you clicked and then "bubbles" up to its parents, grandparents, and so on. It’s like the event travels from the specific child all the way up to the root of the document.
 
 4. What is Event Delegation in JavaScript? Why is it useful?
-Event Delegation is a technique where you put a single event listener on a parent element instead of putting listeners on every single child. It is useful because it saves memory and allows the code to work automatically for new child elements that are added to the page later without needing to attach new listeners to them.
+Event delegation is putting one listener on a parent instead of putting many listeners on every child. It’s useful because it saves memory and it works for new elements that I add to the page later without needing to bind new events to them.
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
+preventDefault() stops the browser's default action (like a link opening a page). stopPropagation() stops the event from bubbling up to parent elements, so the parent handlers don't get triggered by mistake.
 
-preventDefault() stops the browser's default behavior. For example, it prevents a link from opening a URL or a form from refreshing the page.
+How to Run:
 
-stopPropagation() stops an event from "bubbling" up the DOM tree. It prevents parent elements from being notified that the event happened.
+
+Make sure index.html, style.css, script.js, and jobs.png are in the same folder.
+
+Open index.html with Live Server in VS Code.
