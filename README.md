@@ -46,10 +46,3 @@ Event delegation is putting one listener on a parent instead of putting many lis
 
  
 preventDefault() stops the browser's default action (like a link opening a page). stopPropagation() stops the event from bubbling up to parent elements, so the parent handlers don't get triggered by mistake.
-
-How to Run:
-
-
-Make sure index.html, style.css, script.js, and jobs.png are in the same folder.
-
-Open index.html with Live Server in VS Code.
